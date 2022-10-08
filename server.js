@@ -4,6 +4,7 @@ if(process.env.NODE_ENV !== 'production'){
 
 const express = require('express')
 const mongoose = require('mongoose')
+const methodOverride = require('method-override')
 const articleRouter = require('./routes/articles.js')
 const indexRouter = require('./routes/index')
 const app = express()
@@ -18,6 +19,7 @@ app.set('view engine', 'ejs')
 app.use(express.urlencoded({
     extended: false
 }))
+app.use(methodOverride('_method'))
 
 
 app.use('/', indexRouter)

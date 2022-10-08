@@ -27,6 +27,17 @@
                             <%= article.description %> 
                         </div>
                     </div>
+                    <div class="flex text-end">
+                            <a href="articles/<%= article.slug %>" class="btn btn-success">
+                                Read More
+                            </a>
+                            <a href="articles/edit/<%= article.id %>" class="btn btn-info">
+                                Edit
+                            </a>
+                            <form class="d-inline" action="/articles/<%= article.id %>?_method=DELETE" method="POST">
+                                <button type="submit" class="btn btn-danger">Delete</button>
+                            </form>
+                    </div>
                 </div>
             </div>
         <% })  %> 

@@ -2,15 +2,15 @@
     <div class="form-group">
         <div class="mt-4 mb-3 form">
             <label class="fw-bold" for="title">Title</label>
-            <input required value="<%= article.text %> " type="text" class="form-control" name="title" id="title">
+            <input required value="<%= article.title %>" type="text" class="form-control" name="title" id="title">
         </div>
         <div class="mt-4 form">
             <label class="fw-bold" for="description">Description</label>
-            <textarea value="<%= article.description %>" class="form-control" name="description" id="description"></textarea>
+            <textarea class="form-control" name="description" id="description"><%= article.description %> </textarea>
         </div>
         <div class="mt-4 mb-3 form">
             <label class="fw-bold" for="markdown">Markdown</label>
-            <textarea required class="form-control" name="markdown" id="markdown"></textarea>
+            <textarea required class="form-control" name="markdown" id="markdown"><%= article.markdown %></textarea>
         </div>
     </div>
     <div class="d-flex justify-content-end gap-4">
